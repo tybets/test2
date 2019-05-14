@@ -4,6 +4,10 @@ public static calss Test {
     test.test();
   }
   
+  public void test1() {
+    System.out.println(3333);
+  }
+  
   public void test() {
     System.out.println(1333);
   }
