@@ -75,14 +75,14 @@ public class ZookeeperDemo implements Watcher{
         ZookeeperDemo zookeeperDemo = new ZookeeperDemo();
         //获取连接
         zookeeperDemo.zkConnect();
-        String path = "/test1";
+        String path = "/test2";  // 创建一个test2的文件 里面的内容是aaaa
         String value ="aaaa";
         
         //创建znode
         zookeeperDemo.createZnode(path, value.getBytes(), null, CreateMode.PERSISTENT);
-//        //获取znode的值
-//        String znodeValue = zookeeperDemo.getZnodeValue("/amber");
-//        System.out.println(znodeValue);
+        //获取znode的值  
+        String znodeValue = zookeeperDemo.getZnodeValue("/test1"); //查询test1的值
+        System.out.println(znodeValue);
         Thread.sleep(1000 * 60 * 50);
     }
 
